@@ -72,7 +72,6 @@ namespace animation
                 Exit();
 
             // TODO: Add your update logic here
-            animatedSprite.Update((float)gameTime.ElapsedGameTime.TotalSeconds);
 
             base.Update(gameTime);
         }
@@ -86,7 +85,7 @@ namespace animation
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-            animatedSprite.Draw(spriteBatch);
+            animatedSprite.Draw(spriteBatch, (float)gameTime.ElapsedGameTime.TotalSeconds);
 
             base.Draw(gameTime);
         }
